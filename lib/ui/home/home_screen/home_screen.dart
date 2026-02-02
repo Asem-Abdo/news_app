@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/ui/home/category_details/category_details.dart';
+import 'package:news_app/ui/home/home/widget/home_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -7,10 +7,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
         title: Text('Home', style: Theme.of(context).textTheme.headlineLarge),
       ),
-      body: CategoryDetails(),
+      body: HomeWidget(),
     );
   }
 }

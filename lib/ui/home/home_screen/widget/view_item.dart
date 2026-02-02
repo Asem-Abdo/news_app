@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:news_app/model/category.dart';
+import 'package:news_app/ui/home/home/widget/category_item.dart';
+
+class ViewItem extends StatelessWidget {
+  ViewItem({super.key});
+
+  List<Category> categories = Category.getCategories();
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        return CategoryItem(
+          onTap: () {},
+          category: categories[index],
+          crossAxisAlignment: index % 2 != 0
+              ? CrossAxisAlignment.start
+              : CrossAxisAlignment.end,
+          isRight: index % 2 == 0 ? true : false,
+        );
+      },
+      separatorBuilder: (context, index) {
+        return SizedBox(height: 16);
+      },
+      itemCount: categories.length,
+    );
+  }
+}
