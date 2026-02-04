@@ -1,3 +1,27 @@
 {
-  "language": "اللغة"
+  "language": "اللغة",
+  "Something went wrong.": "حدث خطأ ما.",
+  "Retry": "إعادة المحاولة",
+  "General": "عام",
+  "Business": "أعمال",
+  "Sports": "رياضة",
+  "Technology": "تكنولوجيا",
+  "Entertainment": "ترفيه",
+  "Health": "صحة",
+  "Science": "علوم",
+  "View all": "عرض الكل",
+  "News App": "تطبيق الأخبار",
+  "Go To Home": "الذهاب للرئيسية",
+  "Them": "الثيم",
+  "Dark": "داكن",
+  "Light": "فاتح",
+  "English": "إنجليزي",
+  "Arabic": "عربي",
+  "Home": "الرئيسية",
+  "Good Morning ": "صباح الخير ",
+  "Here is Some News For You": "إليك بعض الأخبار",
+  "Category": "الفئة",
+  "Search": "بحث",
+  "Search For News": "ابحث عن الأخبار",
+  "Good Morning": "صباح الخير"
 }

@@ -1,5 +1,33 @@
 {
   "language" : "Language",
   "Something went wrong." : "Something went wrong.",
-  "Retry" : "Retry"
+  "Retry" : "Retry",
+  "General" : "General",
+  "Business" : "Business",
+  "Sports" : "Sports",
+  "Technology" : "Technology",
+  "Entertainment" : "Entertainment",
+  "Health" : "Health",
+  "Science" : "Science",
+  "View all": "View all",
+  "News App" : "News App",
+  "Go To Home" : "Go To Home",
+  "Them" : "Them",
+  "Dark" : "Dark",
+  "Light" : "Light",
+  "English" : "English",
+  "Arabic" : "Arabic",
+  "Home" : "Home",
+  "Good Morning " : "Good Morning ",
+  "Here is Some News For You" : "Here is Some News For You",
+  "Category" : "Category",
+  "Search" : "Search",
+  "Search For News" : "Search For News",
+  "Good Morning": "Good Morning"
+
+
+
+
+
+
 }

@@ -1,26 +1,27 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/utils/app_colors.dart';
-
 import '../../../../model/category.dart';
+
+typedef OnCategoryItemClick = void Function(Category category);
 
 class CategoryItem extends StatelessWidget {
   CategoryItem({
     super.key,
     required this.category,
     required this.isRight,
-    required this.onTap,
+    required this.onCategoryItemClick,
     this.crossAxisAlignment = CrossAxisAlignment.start,
   });
   final Category category;
   CrossAxisAlignment crossAxisAlignment;
   bool isRight = true;
-  void Function()? onTap;
-
+  OnCategoryItemClick onCategoryItemClick;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+    bool isArabic = context.locale.languageCode == 'ar';
     return Container(
       height: height * .22,
       decoration: BoxDecoration(
@@ -38,7 +39,9 @@ class CategoryItem extends StatelessWidget {
           children: [
             Text(category.title, style: Theme.of(context).textTheme.titleLarge),
             InkWell(
-              onTap: onTap,
+              onTap: () {
+                onCategoryItemClick(category);
+              },
               child: Container(
                 height: height * .055,
                 width: width * .4,

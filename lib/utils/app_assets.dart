@@ -1,7 +1,7 @@
 class AppAssets {
   // Business
-  static const String business = 'assets/images/business.png';
-  static const String businessDark = 'assets/images/business_dark.png';
+  static const String business = 'assets/images/busniess.png';
+  static const String businessDark = 'assets/images/busniess_dark.png';
 
   // Entertainment
   static const String entertainment = 'assets/images/entertainment.png';
@@ -27,4 +27,10 @@ class AppAssets {
   // Technology
   static const String technology = 'assets/images/technology.png';
   static const String technologyDark = 'assets/images/technology_dark.png';
+
+  // Icons
+  static const String home_icon = 'assets/images/home_icon.png';
+  static const String theme_icon = 'assets/images/them_icon.png';
+  static const String language_icon = 'assets/images/language_icon.png';
+  static const String bottom_sheet_icon = 'assets/images/arrow_icon.png';
 }
