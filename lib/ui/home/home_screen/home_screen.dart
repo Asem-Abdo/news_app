@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/ui/home/category_details/category_details.dart';
+import 'package:news_app/ui/home/category_details/sources_details.dart';
 import 'package:news_app/ui/home/drawer/home_drawer.dart';
 import 'package:news_app/ui/home/home_screen/widget/home_widget.dart';
 
