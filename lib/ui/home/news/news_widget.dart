@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/di/di.dart';
+import 'package:news_app/di/di_injiectable.dart';
 import 'package:news_app/model/SourceResponse.dart';
 import 'package:news_app/ui/home/category_details/source_state/erroe/error_state_widget.dart';
 import 'package:news_app/ui/home/category_details/source_state/waiting/waiting_state_widget.dart';
@@ -16,7 +18,7 @@ class NewsWidget extends StatefulWidget {
 }
 
 class _NewsWidgetState extends State<NewsWidget> {
-  NewsViewModel viewModel = NewsViewModel();
+  NewsViewModel viewModel = getIt<NewsViewModel>();
 
   @override
   void initState() {

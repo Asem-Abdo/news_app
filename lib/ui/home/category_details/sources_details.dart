@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/di/di.dart';
+import 'package:news_app/di/di_injiectable.dart';
 import 'package:news_app/model/category.dart';
 import 'package:news_app/ui/home/category_details/cubit/sources_state.dart';
 import 'package:news_app/ui/home/category_details/source_state/erroe/error_state_widget.dart';
@@ -16,7 +18,8 @@ class CategoryDetails extends StatefulWidget {
 }
 
 class _CategoryDetailsState extends State<CategoryDetails> {
-  SourcesViewModel viewModel = SourcesViewModel();
+  SourcesViewModel viewModel = getIt<SourcesViewModel>();
+
   @override
   void initState() {
     // TODO: implement initState

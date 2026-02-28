@@ -1,6 +1,6 @@
 import 'dart:convert';
-
 import 'package:http/http.dart' as http;
+import 'package:injectable/injectable.dart';
 import 'package:news_app/api/api_constants.dart';
 import 'package:news_app/api/end_points.dart';
 import 'package:news_app/model/NewsResponse.dart';
@@ -10,8 +10,9 @@ import 'package:news_app/model/SourceResponse.dart';
  https://newsapi.org/v2/top-headlines/sources
  ?apiKey=b5d21532eafc46e197bafde4076e6079
 */
+@singleton
 class ApiManager {
-  static Future<SourceResponse?> getSources(String categoryId) async {
+  Future<SourceResponse?> getSources(String categoryId) async {
     Uri url = Uri.https(ApiConstants.baseUrl, EndPoints.sourceApi, {
       'apiKey': ApiConstants.apiKey,
       'category': categoryId,
@@ -37,7 +38,7 @@ class ApiManager {
   https://newsapi.org/v2/everything?q=bitcoin&apiKey=b5d21532eafc46e197bafde4076e6079
    */
 
-  static Future<NewsResponse>? getNews(String sourceId) async {
+  Future<NewsResponse>? getNews(String sourceId) async {
     Uri url = Uri.https(ApiConstants.baseUrl, EndPoints.newsApi, {
       'apiKey': ApiConstants.apiKey,
       'sources': sourceId,
