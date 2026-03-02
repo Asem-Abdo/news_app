@@ -12,7 +12,7 @@ class SourcesViewModel extends ChangeNotifier {
     errorMessage = null;
     notifyListeners();
     try {
-      var response = await ApiManager.getSources(categoryId);
+      var response = await ApiManager.getInstance().getSources(categoryId);
       if (response?.status == 'error  ') {
         errorMessage = response!.message;
       } else {

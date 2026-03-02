@@ -54,45 +54,6 @@ class _CategoryDetailsState extends State<CategoryDetails> {
           }
         },
       ),
-      // child: FutureBuilder<SourceResponse?>(
-      //   future: ApiManager.getSources(widget.category.id),
-      //   builder: (context, snapshot) {
-      //     /// loading
-      //     if (snapshot.connectionState == ConnectionState.waiting) {
-      //       return WaitingStateWidget();
-      //     }
-      //     /// error => Client
-      //     else if (snapshot.hasError) {
-      //       return ErrorStateWidget(
-      //         text: "Something went wrong.".tr(),
-      //         textButton: "Retry".tr(),
-      //         onPressed: () {
-      //           ApiManager.getSources(widget.category.id);
-      //           setState(() {});
-      //         },
-      //       );
-      //     }
-      //     /// server => response  => success , error
-      //     /// error
-      //     else if (snapshot.data?.status != 'ok') {
-      //       return ErrorStateWidget(
-      //         text: snapshot.data!.message!,
-      //         textButton: "Retry".tr(),
-      //         onPressed: () {
-      //           ApiManager.getSources(widget.category.id);
-      //           setState(() {});
-      //         },
-      //       );
-      //     }
-      //
-      //     ///success
-      //     var sourceList = snapshot.data?.sources ?? [];
-      //     return SuccessSourceWidget(
-      //       itemCount: sourceList.length,
-      //       sourceList: sourceList,
-      //     );
-      //   },
-      // ),
     );
   }
 }
