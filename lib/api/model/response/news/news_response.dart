@@ -1,0 +1,25 @@
+import 'package:json_annotation/json_annotation.dart';
+
+import 'news.dart';
+
+part 'news_response.g.dart';
+
+@JsonSerializable()
+class NewsResponse {
+  @JsonKey(name: "status")
+  final String? status;
+  @JsonKey(name: "totalResults")
+  final int? totalResults;
+  @JsonKey(name: "articles")
+  final List<News>? news;
+
+  NewsResponse({this.status, this.totalResults, this.news});
+
+  factory NewsResponse.fromJson(Map<String, dynamic> json) {
+    return _$NewsResponseFromJson(json);
+  }
+
+  Map<String, dynamic> toJson() {
+    return _$NewsResponseToJson(this);
+  }
+}
